@@ -1,25 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvge18upw6wly"]
-
-[ext_resource type="Texture2D" path="res://scripts/crash_Badicoot.png" id="1_rmkjp"]
+[gd_scene load_steps=7 format=3 uid="uid://cvge18upw6wly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpbyt"]
-atlas = ExtResource("1_rmkjp")
 region = Rect2(6, 22, 26, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irpgr"]
-atlas = ExtResource("1_rmkjp")
 region = Rect2(32, 22, 26, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yig22"]
-atlas = ExtResource("1_rmkjp")
 region = Rect2(58, 22, 26, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08krm"]
-atlas = ExtResource("1_rmkjp")
 region = Rect2(84, 22, 26, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilsth"]
-atlas = ExtResource("1_rmkjp")
 region = Rect2(110, 22, 26, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rokx8"]

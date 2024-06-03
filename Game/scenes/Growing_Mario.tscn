@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://tryern5y8kf3"]
 
-[ext_resource type="Texture2D" uid="uid://cc2eitdpi7y2t" path="res://scripts/Mario.png" id="1_bsjxo"]
+[ext_resource type="Texture2D" uid="uid://cc2eitdpi7y2t" path="res://assets/stripes/Mario.png" id="1_bsjxo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m08i5"]
 atlas = ExtResource("1_bsjxo")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqsk3lhd13wr0"
-path="res://.godot/imported/Mario_slimes.png-5db098d7c113b357ede8a70d2389beeb.ctex"
+path="res://.godot/imported/Mario_slimes.png-63d3fb898df61f40cd028045b472944b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stripes/Mario_slimes.png"
-dest_files=["res://.godot/imported/Mario_slimes.png-5db098d7c113b357ede8a70d2389beeb.ctex"]
+source_file="res://scripts/Mario_slimes.png"
+dest_files=["res://.godot/imported/Mario_slimes.png-63d3fb898df61f40cd028045b472944b.ctex"]
 
 [params]
 
