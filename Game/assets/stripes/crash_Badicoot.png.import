@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2eitdpi7y2t"
-path="res://.godot/imported/Mario.png-1653ac21dadacfcbeb99d602d532f362.ctex"
+uid="uid://seofleod43p3"
+path="res://.godot/imported/crash_Badicoot.png-c39dee346633b814cd88586af575f584.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/Mario.png"
-dest_files=["res://.godot/imported/Mario.png-1653ac21dadacfcbeb99d602d532f362.ctex"]
+source_file="res://assets/stripes/crash_Badicoot.png"
+dest_files=["res://.godot/imported/crash_Badicoot.png-c39dee346633b814cd88586af575f584.ctex"]
 
 [params]
 
