@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m4ej7n36bqhs"
-path="res://.godot/imported/cras_bandicoot4.png-94653eb964af466157e041370cfafb14.ctex"
+uid="uid://cqsk3lhd13wr0"
+path="res://.godot/imported/Mario_slimes.png-986a33528740d4c87a02b2b998f9cfb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/cras_bandicoot4.png"
-dest_files=["res://.godot/imported/cras_bandicoot4.png-94653eb964af466157e041370cfafb14.ctex"]
+source_file="res://Sprites/Mario_slimes.png"
+dest_files=["res://.godot/imported/Mario_slimes.png-986a33528740d4c87a02b2b998f9cfb5.ctex"]
 
 [params]
 

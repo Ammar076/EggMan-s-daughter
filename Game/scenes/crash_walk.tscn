@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://gt3xgxm735ry"]
 
-[ext_resource type="Texture2D" path="res://scripts/crash_bandicoot3.png" id="1_x3una"]
+[ext_resource type="Texture2D" uid="uid://bhd612vwvah5y" path="res://Sprites/crash_bandicoot3.png" id="1_x3una"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lk01c"]
 atlas = ExtResource("1_x3una")
@@ -71,4 +71,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)
 sprite_frames = SubResource("SpriteFrames_8m8y1")
-frame_progress = 0.186323
+frame_progress = 0.984513

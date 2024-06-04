@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbmd352ysfsjc"
-path="res://.godot/imported/world_tileset.png-6717a0120d7c996ee6fc616faf00d1c3.ctex"
+uid="uid://bhd612vwvah5y"
+path="res://.godot/imported/crash_bandicoot3.png-b6ae7a834e14c5425037dfa650ae546c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/world_tileset.png"
-dest_files=["res://.godot/imported/world_tileset.png-6717a0120d7c996ee6fc616faf00d1c3.ctex"]
+source_file="res://Sprites/crash_bandicoot3.png"
+dest_files=["res://.godot/imported/crash_bandicoot3.png-b6ae7a834e14c5425037dfa650ae546c.ctex"]
 
 [params]
 
