@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3f1784s8kiij"
+path="res://.godot/imported/S1_C5.wav-fdea7b29c513a894857d58ec128430f6.sample"
+
+[deps]
+
+source_file="res://sound/Sonic 1/S1_C5.wav"
+dest_files=["res://.godot/imported/S1_C5.wav-fdea7b29c513a894857d58ec128430f6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

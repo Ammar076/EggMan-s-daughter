@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cq05jt2jvi0pa"
+path="res://.godot/imported/slash.ogg-8402de1c8fa7625698e1c999e1f1b93b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/the good one/slash.ogg"
+dest_files=["res://.godot/imported/slash.ogg-8402de1c8fa7625698e1c999e1f1b93b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fkl315vuiv1a"
+path="res://.godot/imported/die 1.wav-db3abf99888159c2d160640bf5eb0fe9.sample"
+
+[deps]
+
+source_file="res://sound/the good one/die 1.wav"
+dest_files=["res://.godot/imported/die 1.wav-db3abf99888159c2d160640bf5eb0fe9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
