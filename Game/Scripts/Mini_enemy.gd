@@ -33,6 +33,7 @@ func _on_timer_timeout():
 	queue_free()
 
 func trigger_death():
+	$CollisionShape2D.queue_free()
 	$Damage.queue_free()
 	dead = true
 	timer.start()

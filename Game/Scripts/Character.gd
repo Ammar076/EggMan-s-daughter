@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -450.0
 @onready var character = $"."
 signal damageEnemy
 # Get the gravity from the project settings to be synced with RigidBody nodes.

@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bmbo0wf7nqvs2"]
 
 [ext_resource type="Script" path="res://Scripts/Mini_enemy.gd" id="1_nftbp"]
-[ext_resource type="Texture2D" uid="uid://cvj1vujoybww" path="res://Sprites/Mario_slimes.png" id="2_gm7af"]
-[ext_resource type="PackedScene" uid="uid://dqna2g3mgbipy" path="res://scenes/damage.tscn" id="3_hmg27"]
+[ext_resource type="Texture2D" uid="uid://cqsk3lhd13wr0" path="res://Sprites/Mario_slimes.png" id="2_gm7af"]
+[ext_resource type="PackedScene" uid="uid://6wsru8dypwq4" path="res://scenes/damage.tscn" id="3_hmg27"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h54gh"]
 atlas = ExtResource("2_gm7af")
