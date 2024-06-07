@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8bsdrxfu7ywi"
-path="res://.godot/imported/crash_bandicoot3.png-b6ae7a834e14c5425037dfa650ae546c.ctex"
+uid="uid://dwisol542ba1x"
+path="res://.godot/imported/Crash_Bandicoot2.png-89874ec3915c2c354e4655557330dba5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crash_bandicoot3.png"
-dest_files=["res://.godot/imported/crash_bandicoot3.png-b6ae7a834e14c5425037dfa650ae546c.ctex"]
+source_file="res://Sprites/Crash_Bandicoot2.png"
+dest_files=["res://.godot/imported/Crash_Bandicoot2.png-89874ec3915c2c354e4655557330dba5.ctex"]
 
 [params]
 
