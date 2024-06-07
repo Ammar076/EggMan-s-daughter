@@ -10,6 +10,8 @@ var is_dead = false
 @onready var animated_sprite = $AnimatedSprite2D
 var health = 3
 var jumping = false
+var attack = false
+@onready var timer = $Timer
 
 var coyote_frames = 600  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
@@ -38,6 +40,12 @@ func _physics_process(delta):
 		coyote = true
 		coyotetimer.start()
 	
+	if Input.is_action_just_pressed("attack"):
+		$Area2D/CollisionShape2D.disabled = false
+		attack = true
+		timer.start()
+	else:
+		$Area2D/CollisionShape2D.disabled = true
 	# Flip the Sprite
 	if direction > 0:
 		animated_sprite.flip_h = false
@@ -51,11 +59,13 @@ func _physics_process(delta):
 		else: 
 			animated_sprite.play("hurt")
 	else:
-		if is_on_floor():
+		if is_on_floor() and !attack:
 			if direction == 0:
 				animated_sprite.play("idle")
 			else:
 				animated_sprite.play("run")
+		elif attack:
+			animated_sprite.play("attack")
 				
 		else:
 			animated_sprite.play("jump")
@@ -76,5 +86,15 @@ func _on_killzone_player_damaged():
 func change_player_position(new_position):
 	set_global_position(new_position)
 	
-func _on_coyote_timer_timeout():
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("hit"):
+		body.take_damage()
+
+
+func _on_timer_timeout():
+	attack = false
+
+
+func _on_coyotetimer_timeout():
 	coyote = false
