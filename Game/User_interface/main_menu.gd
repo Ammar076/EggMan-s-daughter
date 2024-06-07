@@ -2,8 +2,8 @@ class_name Main_Menu
 
 extends Control
 
-@onready var start_button =$MarginContainer/HBoxContainer/VBoxContainer/Start_Button as Button
-@onready var exit_button  =$MarginContainer/HBoxContainer/VBoxContainer/Exit_Button as Button
+@onready var start_button =$MarginContainer2/HBoxContainer/VBoxContainer/Start_Button as Button
+@onready var exit_button  =$MarginContainer2/HBoxContainer/VBoxContainer/Exit_Button as Button
 @onready var start_level  = preload("res://scenes/Game.tscn") as PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
