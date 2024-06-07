@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlqwkxkgr8vl2"]
+
+[ext_resource type="Script" path="res://Scripts/mario.gd" id="1_54bpq"]
+[ext_resource type="Texture2D" uid="uid://b345dr2v0r2af" path="res://Sprites/mario2.png" id="3_8xha2"]
+[ext_resource type="PackedScene" uid="uid://dqna2g3mgbipy" path="res://scenes/damage.tscn" id="4_c16iw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uor8i"]
+atlas = ExtResource("3_8xha2")
+region = Rect2(0, 35, 16, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71xju"]
+atlas = ExtResource("3_8xha2")
+region = Rect2(76, 35, 16, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44hv2"]
+atlas = ExtResource("3_8xha2")
+region = Rect2(94, 35, 16, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxykn"]
+atlas = ExtResource("3_8xha2")
+region = Rect2(112, 35, 16, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uhfkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uor8i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71xju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44hv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxykn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64lt"]
+radius = 7.25
+height = 31.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsjfw"]
+radius = 6.0
+
+[node name="BossMario" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_54bpq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(1.02315, 0.91376)
+sprite_frames = SubResource("SpriteFrames_uhfkc")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 10)
+target_position = Vector2(11, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 10)
+target_position = Vector2(-12, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("CapsuleShape2D_w64lt")
+
+[node name="Damage" parent="." instance=ExtResource("4_c16iw")]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_lsjfw")
+
+[node name="followright" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(109, -1)
+collision_mask = 2
+
+[node name="followleft" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(-109, 0)
+collision_mask = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]

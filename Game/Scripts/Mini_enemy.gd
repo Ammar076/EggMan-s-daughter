@@ -40,3 +40,4 @@ func trigger_death():
 
 func _on_damage_body_entered(body):
 	body.damage()
+
