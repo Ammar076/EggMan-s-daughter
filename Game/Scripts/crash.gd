@@ -17,34 +17,35 @@ var running = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if ray_cast_right.is_colliding():
-		running = true
-		animated_sprite.flip_h = false
-		position.x += SPEED * delta
-	if ray_cast_left.is_colliding():
-		running  = true
-		animated_sprite.play("walk")
-		animated_sprite.flip_h = true
-		position.x -= SPEED * delta
-	if stop_left.is_colliding():
-		running  = false
-		animated_sprite.play("idle")
-		position.x += SPEED * delta
-	if stop_right.is_colliding():
-		running = false
-		animated_sprite.play("idle")
-		position.x -= SPEED * delta
+	if dead:
+		pass
+	else:
+		if ray_cast_right.is_colliding():
+			running = true
+			animated_sprite.flip_h = false
+			position.x += SPEED * delta
+		elif ray_cast_left.is_colliding():
+			running  = true
+			animated_sprite.flip_h = true
+			position.x -= SPEED * delta
+		else:
+			running = false
+		if stop_left.is_colliding():
+			running  = false
+			animated_sprite.play("idle")
+			position.x += SPEED * delta
+		elif stop_right.is_colliding():
+			running = false
+			animated_sprite.play("idle")
+			position.x -= SPEED * delta
 
 	
 	if dead:
-		animated_sprite.play("death")
+		animated_sprite.play("Die")
 	elif running:
-		animated_sprite.play("walk")
+		animated_sprite.play("Spin(hit)")
 	else:
-		animated_sprite.play("idle")
-
-func _on_timer_timeout():
-	$".".queue_free()
+		animated_sprite.play("Idle")
 
 func trigger_death():
 	health -= 1
@@ -56,3 +57,7 @@ func trigger_death():
 
 func _on_damage_body_entered(body):
 	body.damage()
+
+
+func _on_timer_timeout():
+	$".".queue_free()

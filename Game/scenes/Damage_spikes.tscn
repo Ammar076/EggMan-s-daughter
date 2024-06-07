@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdyqs67oc6in4"]
+
+[ext_resource type="Script" path="res://Scripts/Damage_spike.gd" id="1_28p4s"]
+
+[node name="Damage_spikes" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_28p4s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
