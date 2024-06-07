@@ -11,8 +11,21 @@ config_version=5
 [application]
 
 config/name="KrashMario"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input]
+
+left={
+"deadzone": 0.5,
+"events": []
+}
 
 [rendering]
 
