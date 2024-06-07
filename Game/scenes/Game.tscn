@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bp3gd2ykdbv64"]
 
-[ext_resource type="Texture2D" uid="uid://bmi2urngco40a" path="res://Sprites/world_tileset.png" id="1_4espg"]
+[ext_resource type="Texture2D" uid="uid://cbmd352ysfsjc" path="res://Sprites/world_tileset.png" id="1_4espg"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_mirst"]
 [ext_resource type="PackedScene" uid="uid://dw3x3ww426kpa" path="res://scenes/coin.tscn" id="3_4yi2v"]
 [ext_resource type="PackedScene" uid="uid://bx5oere6yurss" path="res://scenes/Character.tscn" id="5_4jqdu"]
-[ext_resource type="PackedScene" uid="uid://dqxck65l6u11t" path="res://scenes/killzone.tscn" id="5_bip7l"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="5_bip7l"]
 [ext_resource type="PackedScene" uid="uid://bmbo0wf7nqvs2" path="res://scenes/MiniEnemy.tscn" id="6_b7vfc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ametb"]

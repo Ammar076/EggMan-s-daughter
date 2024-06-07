@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c88xx3kj0hcc5"]
 
-[ext_resource type="Texture2D" path="res://User_interface/Background/Main_Menu.png" id="1_4ro1a"]
-[ext_resource type="Script" path="res://User_interface/m_ain_menu.gd" id="1_m6gin"]
-[ext_resource type="FontFile" path="res://assets/fonts/Stepalange-x3BLm.otf" id="2_il5bj"]
-[ext_resource type="FontFile" path="res://assets/fonts/StepalangeShort-p7GZd.otf" id="3_3dxr6"]
+[ext_resource type="Script" path="res://User_interface/main_menu.gd" id="1_8oacd"]
+[ext_resource type="Texture2D" uid="uid://b2etvcq6j8mi0" path="res://User_interface/Background/Main_Menu.png" id="2_4vj0s"]
+[ext_resource type="FontFile" uid="uid://cnwkimoxivma2" path="res://assets/fonts/Stepalange-x3BLm.otf" id="3_rlwxs"]
+[ext_resource type="FontFile" uid="uid://cfbcolvy67l" path="res://assets/fonts/StepalangeShort-p7GZd.otf" id="4_5jiub"]
 
 [node name="MAin_Menu" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_m6gin")
+script = ExtResource("1_8oacd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4ro1a")
+texture = ExtResource("2_4vj0s")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -49,7 +49,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_outline_size = 9
-theme_override_fonts/font = ExtResource("2_il5bj")
+theme_override_fonts/font = ExtResource("3_rlwxs")
 theme_override_font_sizes/font_size = 50
 text = "EggMan's Doughter"
 horizontal_alignment = 1
@@ -81,9 +81,24 @@ theme_override_colors/font_color = Color(0.792157, 0.839216, 0.823529, 1)
 theme_override_colors/font_hover_color = Color(0, 0.368627, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0.843137, 1)
 theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
-theme_override_fonts/font = ExtResource("3_3dxr6")
+theme_override_fonts/font = ExtResource("4_5jiub")
 theme_override_font_sizes/font_size = 50
 text = "Start Game"
+
+[node name="Seprator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="keyboard" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(260, 75)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.792157, 0.839216, 0.823529, 1)
+theme_override_colors/font_hover_color = Color(0, 0.368627, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.368627, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_5jiub")
+theme_override_font_sizes/font_size = 50
+text = "Keyboard info"
 
 [node name="Seprator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -96,6 +111,6 @@ theme_override_colors/font_color = Color(0.792157, 0.839216, 0.823529, 1)
 theme_override_colors/font_hover_color = Color(0, 0.368627, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0.368627, 0, 1)
 theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
-theme_override_fonts/font = ExtResource("3_3dxr6")
+theme_override_fonts/font = ExtResource("4_5jiub")
 theme_override_font_sizes/font_size = 50
 text = "Exit Game"
