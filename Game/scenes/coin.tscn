@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpkc0183e07y1"]
+[gd_scene load_steps=21 format=3 uid="uid://dw3x3ww426kpa"]
 
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_lkkgb"]
-[ext_resource type="Texture2D" uid="uid://pcyw3ijh3ewi" path="res://sprites/coin.png" id="2_n3pwm"]
+[ext_resource type="Texture2D" uid="uid://pcyw3ijh3ewi" path="res://Sprites/coin.png" id="2_n3pwm"]
 [ext_resource type="AudioStream" uid="uid://dmib7037eau48" path="res://sound/coin.wav" id="3_ppxun"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfb5p"]
@@ -198,6 +198,7 @@ _data = {
 }
 
 [node name="coin" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_lkkgb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
