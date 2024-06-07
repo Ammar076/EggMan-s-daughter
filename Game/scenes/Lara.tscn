@@ -1,0 +1,333 @@
+[gd_scene load_steps=68 format=3 uid="uid://cjnvthyhndg3i"]
+
+[ext_resource type="Script" path="res://scenes/Lara.gd" id="1_4h4ev"]
+[ext_resource type="Texture2D" uid="uid://3jt8vrf5au4g" path="res://Muaz-Tiles/THE Stupid 2D Char/Jump/Warrior_Jump_2.png" id="1_75n3l"]
+[ext_resource type="Texture2D" uid="uid://civobto8aa68u" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_1.png" id="2_mogsm"]
+[ext_resource type="Texture2D" uid="uid://bgx3d6h1yfi3r" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_1.png" id="2_sgjpa"]
+[ext_resource type="Texture2D" uid="uid://d18l1f8e4akcd" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_2.png" id="3_1ltaw"]
+[ext_resource type="Texture2D" uid="uid://d1p8xtnwi1m4n" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_2.png" id="3_ijtvh"]
+[ext_resource type="Texture2D" uid="uid://cwcg6yunrtjui" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_3.png" id="4_78p6o"]
+[ext_resource type="Texture2D" uid="uid://gmvegovk5f8c" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_3.png" id="4_on0c0"]
+[ext_resource type="Texture2D" uid="uid://4d4aydjxnb67" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_4.png" id="5_alc4t"]
+[ext_resource type="Texture2D" uid="uid://b58ku75k6j5qb" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_4.png" id="5_tk3la"]
+[ext_resource type="Texture2D" uid="uid://baxawffk1o4ob" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_5.png" id="6_4gudk"]
+[ext_resource type="Texture2D" uid="uid://crhuo4xn1wkd0" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_5.png" id="6_a3uid"]
+[ext_resource type="Texture2D" uid="uid://bc7ieg0xhs2lf" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_6.png" id="7_n6vow"]
+[ext_resource type="Texture2D" uid="uid://brr33oxddgrtd" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_6.png" id="7_puep4"]
+[ext_resource type="Texture2D" uid="uid://l3woi5tw3ju" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_7.png" id="8_ga6uj"]
+[ext_resource type="Texture2D" uid="uid://cehvgg5itbbdh" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_8.png" id="9_fg5ln"]
+[ext_resource type="Texture2D" uid="uid://n4vnb3g3p0ii" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_9.png" id="10_f1yq6"]
+[ext_resource type="Texture2D" uid="uid://cdsy1ij81ca54" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_10.png" id="11_gqiry"]
+[ext_resource type="Texture2D" uid="uid://djv6nceyr2icd" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_11.png" id="12_8p8gy"]
+[ext_resource type="Texture2D" uid="uid://bvopwrbb2likb" path="res://Muaz-Tiles/THE Stupid 2D Char/Attack/Warrior_Attack_12.png" id="13_558nr"]
+[ext_resource type="Texture2D" uid="uid://tp88hqwh58pj" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_1.png" id="14_rdx21"]
+[ext_resource type="Texture2D" uid="uid://bewf5pdn7evtl" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_2.png" id="15_qwk8u"]
+[ext_resource type="Texture2D" uid="uid://37jpk3gcfmw1" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_3.png" id="16_qclkp"]
+[ext_resource type="Texture2D" uid="uid://doyvdephkm64r" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_4.png" id="17_jh1f4"]
+[ext_resource type="Texture2D" uid="uid://bqmeemkerbp8s" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_5.png" id="18_ds0r7"]
+[ext_resource type="Texture2D" uid="uid://bjhsvcbueq4su" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_6.png" id="19_ghkgr"]
+[ext_resource type="Texture2D" uid="uid://vyry6hokicmj" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash/Warrior_Dash_7.png" id="20_dqdje"]
+[ext_resource type="Texture2D" uid="uid://jfmgeeg6jgvp" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_1.png" id="21_hru7a"]
+[ext_resource type="Texture2D" uid="uid://dgitt8jelsgdi" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_2.png" id="22_cl4tw"]
+[ext_resource type="Texture2D" uid="uid://c08vu88ollss6" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_3.png" id="23_3bgpq"]
+[ext_resource type="Texture2D" uid="uid://ebefgs2o0xjc" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_4.png" id="24_wlumw"]
+[ext_resource type="Texture2D" uid="uid://ck7nysbguj4ns" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_5.png" id="25_21oag"]
+[ext_resource type="Texture2D" uid="uid://73attx1rn1a4" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_6.png" id="26_bcwcb"]
+[ext_resource type="Texture2D" uid="uid://cwew4lgmkpy1" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_7.png" id="27_2tist"]
+[ext_resource type="Texture2D" uid="uid://e3jr1xupeswl" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_8.png" id="28_3enxd"]
+[ext_resource type="Texture2D" uid="uid://dt0tuc4x6okpg" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_9.png" id="29_nbl8h"]
+[ext_resource type="Texture2D" uid="uid://bagrj64osj31" path="res://Muaz-Tiles/THE Stupid 2D Char/Dash Attack/Warrior_Dash-Attack_10.png" id="30_w8euv"]
+[ext_resource type="Texture2D" uid="uid://3oi3kbxk7v8i" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_1.png" id="31_i1j0l"]
+[ext_resource type="Texture2D" uid="uid://djd6wlt4opvp2" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_2.png" id="32_6mnx8"]
+[ext_resource type="Texture2D" uid="uid://c2vx8h0i7sqgd" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_3.png" id="33_wg641"]
+[ext_resource type="Texture2D" uid="uid://d1frynh7xlmvu" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_4.png" id="34_docfp"]
+[ext_resource type="Texture2D" uid="uid://w4mua5dpi61b" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_5.png" id="35_1mxkx"]
+[ext_resource type="Texture2D" uid="uid://bjm8ao3ppc18q" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_6.png" id="36_lxyoi"]
+[ext_resource type="Texture2D" uid="uid://mtj3sfgjxnlc" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_7.png" id="37_j21ac"]
+[ext_resource type="Texture2D" uid="uid://cdp0hd5cj8l8j" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_8.png" id="38_enm82"]
+[ext_resource type="Texture2D" uid="uid://c4ke6krhbn6iy" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_9.png" id="39_nhj62"]
+[ext_resource type="Texture2D" uid="uid://d3igqkcxjfntv" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_10.png" id="40_u68xb"]
+[ext_resource type="Texture2D" uid="uid://gdj3dj08dlmb" path="res://Muaz-Tiles/THE Stupid 2D Char/DeathnoEffect/Warrior_Death_11.png" id="41_ullhm"]
+[ext_resource type="Texture2D" uid="uid://dqrag2cdb124v" path="res://Muaz-Tiles/THE Stupid 2D Char/Hurt-Effect/Warrior_hurt_1.png" id="42_su7ay"]
+[ext_resource type="Texture2D" uid="uid://dlqlx23tlcodm" path="res://Muaz-Tiles/THE Stupid 2D Char/Hurt-Effect/Warrior_hurt_2.png" id="43_8s5xr"]
+[ext_resource type="Texture2D" uid="uid://du1pjv2j0h17y" path="res://Muaz-Tiles/THE Stupid 2D Char/Hurt-Effect/Warrior_hurt_3.png" id="44_25u8f"]
+[ext_resource type="Texture2D" uid="uid://prnj4pvdp1q6" path="res://Muaz-Tiles/THE Stupid 2D Char/Hurt-Effect/Warrior_hurt_4.png" id="45_88rng"]
+[ext_resource type="Texture2D" uid="uid://doo5qddqqoxop" path="res://Muaz-Tiles/THE Stupid 2D Char/Jump/Warrior_Jump_1.png" id="52_hlclm"]
+[ext_resource type="Texture2D" uid="uid://bpkfcb5fjihy1" path="res://Muaz-Tiles/THE Stupid 2D Char/Jump/Warrior_Jump_3.png" id="54_sspcs"]
+[ext_resource type="Texture2D" uid="uid://i11hdhwc4cen" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_1.png" id="55_0ej3f"]
+[ext_resource type="Texture2D" uid="uid://c6ygkd8omr44l" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_3.png" id="56_ohhen"]
+[ext_resource type="Texture2D" uid="uid://q072lwqcv0rf" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_2.png" id="57_hxatu"]
+[ext_resource type="Texture2D" uid="uid://b3syw1o2y7rqw" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_4.png" id="58_tdkt3"]
+[ext_resource type="Texture2D" uid="uid://u7uuls11h5wl" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_5.png" id="59_juvuf"]
+[ext_resource type="Texture2D" uid="uid://b3y6uvy6tucjc" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_6.png" id="60_1ff1j"]
+[ext_resource type="Texture2D" uid="uid://bhn1fwv7anlix" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_7.png" id="61_v7j0e"]
+[ext_resource type="Texture2D" uid="uid://bun5718on2df5" path="res://Muaz-Tiles/THE Stupid 2D Char/Run/Warrior_Run_8.png" id="62_jaffw"]
+[ext_resource type="Texture2D" uid="uid://dwowvlbx4jt2h" path="res://Muaz-Tiles/THE Stupid 2D Char/WallSlide/Warrior_WallSlide_1.png" id="63_nyvsj"]
+[ext_resource type="Texture2D" uid="uid://bvcfcexurlwth" path="res://Muaz-Tiles/THE Stupid 2D Char/WallSlide/Warrior_WallSlide_2.png" id="64_dvms5"]
+[ext_resource type="Texture2D" uid="uid://b3gm0jv4lp411" path="res://Muaz-Tiles/THE Stupid 2D Char/WallSlide/Warrior_WallSlide_3.png" id="65_klfiw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ifif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sgjpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ijtvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_78p6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tk3la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a3uid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_puep4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ga6uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fg5ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f1yq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gqiry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8p8gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_558nr")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_rdx21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qwk8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qclkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jh1f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ds0r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ghkgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dqdje")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_hru7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cl4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3bgpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wlumw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_21oag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bcwcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2tist")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3enxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nbl8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_w8euv")
+}],
+"loop": true,
+"name": &"dash-attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_i1j0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6mnx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_wg641")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_docfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_1mxkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lxyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_j21ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_enm82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nhj62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_u68xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ullhm")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_su7ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8s5xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_25u8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_88rng")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mogsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1ltaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_on0c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_alc4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4gudk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n6vow")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_hlclm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_75n3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_sspcs")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_0ej3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ohhen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_hxatu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_tdkt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_juvuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_1ff1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_v7j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_jaffw")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_nyvsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_dvms5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_klfiw")
+}],
+"loop": true,
+"name": &"wall-side",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_46b5y"]
+radius = 24.0
+height = 128.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_4h4ev")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(319.277, 460)
+scale = Vector2(4.18182, 4.18182)
+sprite_frames = SubResource("SpriteFrames_8ifif")
+animation = &"jump"
+autoplay = "idle"
+frame_progress = 0.432701
+offset = Vector2(3.59, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(324, 469)
+shape = SubResource("CapsuleShape2D_46b5y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(318, 471)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
