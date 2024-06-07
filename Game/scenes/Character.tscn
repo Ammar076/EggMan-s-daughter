@@ -258,7 +258,7 @@ animations = [{
 radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbfe5"]
-size = Vector2(29.5, 25)
+size = Vector2(19.4375, 25)
 
 [node name="Character" type="CharacterBody2D"]
 position = Vector2(6, -20)
@@ -266,10 +266,10 @@ collision_layer = 2
 script = ExtResource("1_py0wx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_vb3dc")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.46091
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 5)
@@ -288,6 +288,7 @@ position = Vector2(16, 8)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attackright"]
+position = Vector2(-4.71875, 0)
 shape = SubResource("RectangleShape2D_nbfe5")
 disabled = true
 
@@ -296,7 +297,7 @@ position = Vector2(16, 8)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attackleft"]
-position = Vector2(-44, 0)
+position = Vector2(-39, 0)
 shape = SubResource("RectangleShape2D_nbfe5")
 disabled = true
 
@@ -304,12 +305,20 @@ disabled = true
 wait_time = 1.2
 
 [node name="Label" type="Label" parent="."]
-offset_left = -197.0
-offset_top = -94.0
-offset_right = -139.0
-offset_bottom = -71.0
+offset_left = -167.0
+offset_top = -76.0
+offset_right = -109.0
+offset_bottom = -53.0
 theme_override_fonts/font = ExtResource("54_ngybb")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 10
+
+[node name="score_label" type="Label" parent="."]
+offset_left = -34.0
+offset_top = -76.0
+offset_right = 23.0
+offset_bottom = -52.0
+theme_override_fonts/font = ExtResource("54_ngybb")
+theme_override_font_sizes/font_size = 10
 
 [connection signal="timeout" from="Coyotetimer" to="." method="_on_coyotetimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmbo0wf7nqvs2"]
+[gd_scene load_steps=11 format=3 uid="uid://bmbo0wf7nqvs2"]
 
 [ext_resource type="Script" path="res://Scripts/Mini_enemy.gd" id="1_nftbp"]
 [ext_resource type="Texture2D" uid="uid://cvj1vujoybww" path="res://Sprites/Mario_slimes.png" id="2_gm7af"]
@@ -51,8 +51,6 @@ radius = 8.26514
 [sub_resource type="CircleShape2D" id="CircleShape2D_p5xpl"]
 radius = 7.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0bub"]
-
 [node name="miniEnemy" type="CharacterBody2D"]
 script = ExtResource("1_nftbp")
 
@@ -82,12 +80,6 @@ position = Vector2(-1, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_p5xpl")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(17, -24)
-shape = SubResource("RectangleShape2D_x0bub")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]

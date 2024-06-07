@@ -20,10 +20,13 @@ var last_floor = false  # Last frame's on-floor state
 @onready var coyotetimer = $Coyotetimer
 @onready var damagetimer = $damagetimer
 @onready var deathtimer = $deathtimer
+var score = 0
+@onready var score_label = $score_label
 
 func _ready():
 	coyotetimer.wait_time = coyote_frames / 60.0
 	display_health()
+	score_label.text = "Coins x " + str(score)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -120,10 +123,12 @@ func _on_deathtimer_timeout():
 func display_health():
 	health_label.text = "PLAYER x " + str(health)
 
-
 func _on_attackleft_body_entered(body):
 	body.trigger_death()
 
-
 func _on_attackright_body_entered(body):
 	body.trigger_death()
+
+func display_coins():
+	score += 1
+	score_label.text = "Coins x " + str(score)
