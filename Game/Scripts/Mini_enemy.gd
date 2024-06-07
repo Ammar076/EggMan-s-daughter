@@ -33,6 +33,7 @@ func _on_timer_timeout():
 	queue_free()
 
 func trigger_death():
+	$Damage.queue_free()
 	dead = true
 	timer.start()
 
