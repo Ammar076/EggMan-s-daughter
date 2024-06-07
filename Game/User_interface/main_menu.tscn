@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c88xx3kj0hcc5"]
+[gd_scene load_steps=11 format=3 uid="uid://c88xx3kj0hcc5"]
 
 [ext_resource type="Script" path="res://User_interface/main_menu.gd" id="1_8oacd"]
+[ext_resource type="AudioStream" uid="uid://dqbo25m0638tl" path="res://sound/oof_mario.mp3" id="2_5gc65"]
 [ext_resource type="Texture2D" uid="uid://bkd0uxwteeb3p" path="res://User_interface/Background/Background.png" id="2_mkkxd"]
 [ext_resource type="FontFile" uid="uid://cnwkimoxivma2" path="res://assets/fonts/Stepalange-x3BLm.otf" id="3_rlwxs"]
 [ext_resource type="FontFile" uid="uid://cfbcolvy67l" path="res://assets/fonts/StepalangeShort-p7GZd.otf" id="4_5jiub"]
+[ext_resource type="AudioStream" uid="uid://dulva16nw82ue" path="res://sound/8_bit_iced_village_lofi.mp3" id="5_hhst6"]
+[ext_resource type="AudioStream" uid="uid://bx4k4ebyqgc4p" path="res://sound/Let's go_maroi.mp3" id="7_b0d1j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sweup"]
 bg_color = Color(0.223103, 0.223103, 0.223103, 1)
@@ -44,6 +47,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8oacd")
+
+[node name="oof_effect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5gc65")
+bus = &"SFX"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -142,3 +149,11 @@ theme_override_font_sizes/font_size = 90
 text = "EggMan's Doughter"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Background_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hhst6")
+bus = &"Music"
+
+[node name="Ler\'s Go" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_b0d1j")
+bus = &"SFX"
