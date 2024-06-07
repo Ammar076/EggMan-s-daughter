@@ -87,7 +87,6 @@ func _on_killzone_player_damaged():
 	is_dead= true
 	health = 0
 
-
 		
 func _on_timer_timeout():
 	attack = false
@@ -110,3 +109,7 @@ func _on_damagetimer_timeout():
 func _on_deathtimer_timeout():
 	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()
+
+
+func _on_area_2d_body_entered(body):
+	body.trigger_death()
