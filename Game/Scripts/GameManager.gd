@@ -5,4 +5,4 @@ var score = 0
 
 
 func add_point():
-d 	player.display_coins()
+	player.display_coins()

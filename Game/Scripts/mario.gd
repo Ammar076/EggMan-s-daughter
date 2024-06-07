@@ -3,6 +3,9 @@ extends CharacterBody2D
 const SPEED = 50
 
 const JUMP_VELOCITY = -400.0
+@onready var hurt = $hurt
+@onready var die = $die
+@onready var hit = $hit
 
 var direction = 1
 @onready var ray_cast_right = $followright
@@ -48,12 +51,15 @@ func _on_timer_timeout():
 
 func trigger_death():
 	health -= 1
+	hurt.play()
 	print("death")
 	if health <= 0:
+		die.play()
 		timer.start()
 		$CollisionShape2D.queue_free()
 		$Damage.queue_free()
 		dead = true
 
 func _on_damage_body_entered(body):
+	hurt.play()
 	body.damage()
