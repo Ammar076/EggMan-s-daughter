@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cswq808ey1qmj"]
+[gd_scene load_steps=15 format=3 uid="uid://cswq808ey1qmj"]
 
 [ext_resource type="Script" path="res://Scripts/mario.gd" id="1_54bpq"]
 [ext_resource type="Texture2D" uid="uid://bxwgkl8uid86v" path="res://Sprites/mario2.png" id="3_8xha2"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dqbo25m0638tl" path="res://sound/oof_mario.mp3" id="4_xx4ql"]
 [ext_resource type="AudioStream" uid="uid://dkkwtirxqapeb" path="res://sound/Get_hit_mario.mp3" id="5_g43kj"]
 [ext_resource type="AudioStream" uid="uid://bfiyktlm1oh1j" path="res://sound/die 1.wav" id="6_2b8j0"]
+[ext_resource type="AudioStream" uid="uid://dpuyrykx12iwy" path="res://sound/its-me-mario.mp3" id="7_t3fwx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uor8i"]
 atlas = ExtResource("3_8xha2")
@@ -108,6 +109,9 @@ stream = ExtResource("5_g43kj")
 
 [node name="die" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_2b8j0")
+
+[node name="it_ME" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_t3fwx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]

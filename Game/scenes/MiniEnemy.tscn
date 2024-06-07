@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmbo0wf7nqvs2"]
+[gd_scene load_steps=12 format=3 uid="uid://bmbo0wf7nqvs2"]
 
 [ext_resource type="Script" path="res://Scripts/Mini_enemy.gd" id="1_nftbp"]
 [ext_resource type="Texture2D" uid="uid://cqsk3lhd13wr0" path="res://Sprites/Mario_slimes.png" id="2_gm7af"]
 [ext_resource type="PackedScene" uid="uid://6wsru8dypwq4" path="res://scenes/damage.tscn" id="3_hmg27"]
+[ext_resource type="AudioStream" uid="uid://0sxcwf6f0xne" path="res://sound/S1_A4.wav" id="4_qcotv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h54gh"]
 atlas = ExtResource("2_gm7af")
@@ -80,6 +81,9 @@ position = Vector2(-1, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_p5xpl")
+
+[node name="hurt_budy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qcotv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]

@@ -97,21 +97,6 @@ theme_override_fonts/font = ExtResource("4_5jiub")
 theme_override_font_sizes/font_size = 50
 text = "Start Game"
 
-[node name="Seprator3" type="Control" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="keyboard" type="Button" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(260, 75)
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_default_cursor_shape = 2
-theme = SubResource("Theme_fsex5")
-theme_override_colors/font_color = Color(0.12549, 0.0745098, 0.0666667, 1)
-theme_override_colors/font_hover_color = Color(0.999901, 0.44378, 0.3752, 1)
-theme_override_fonts/font = ExtResource("4_5jiub")
-theme_override_font_sizes/font_size = 50
-text = "Keyboard Info"
-
 [node name="Seprator2" type="Control" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 

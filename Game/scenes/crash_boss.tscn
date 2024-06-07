@@ -1,9 +1,11 @@
-[gd_scene load_steps=53 format=3 uid="uid://b1wm5yu17o2lt"]
+[gd_scene load_steps=55 format=3 uid="uid://dgx6emvbcx4fa"]
 
 [ext_resource type="Texture2D" uid="uid://dwisol542ba1x" path="res://Sprites/Crash_Bandicoot2.png" id="1_4hxq5"]
 [ext_resource type="Script" path="res://Scripts/crash.gd" id="1_d887b"]
 [ext_resource type="Texture2D" uid="uid://csesqqael7aov" path="res://Sprites/Crash_Bandicoot.png" id="2_11nwi"]
-[ext_resource type="PackedScene" uid="uid://dqna2g3mgbipy" path="res://scenes/damage.tscn" id="2_s5214"]
+[ext_resource type="PackedScene" uid="uid://6wsru8dypwq4" path="res://scenes/damage.tscn" id="2_s5214"]
+[ext_resource type="AudioStream" uid="uid://bov673g1ff5ro" path="res://sound/S1_A3.wav" id="5_uaf51"]
+[ext_resource type="AudioStream" uid="uid://msiin8bmbpx8" path="res://sound/S1_AB.wav" id="6_f5abq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt816"]
 atlas = ExtResource("1_4hxq5")
@@ -398,6 +400,12 @@ collision_mask = 2
 position = Vector2(0, 5)
 target_position = Vector2(-109, 0)
 collision_mask = 2
+
+[node name="die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uaf51")
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_f5abq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]

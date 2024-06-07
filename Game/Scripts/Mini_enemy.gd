@@ -8,6 +8,7 @@ var direction = 1
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var hurt_budy = $hurt_budy
 
 var dead = false
 @onready var timer = $Timer
@@ -40,5 +41,6 @@ func trigger_death():
 
 
 func _on_damage_body_entered(body):
+	hurt_budy.play()
 	body.damage()
 

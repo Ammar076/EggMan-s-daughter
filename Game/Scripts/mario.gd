@@ -13,18 +13,27 @@ var direction = 1
 @onready var stop_left = $RayCastLeft
 @onready var stop_right = $RayCastRight
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var it_me = $it_ME
+
 var health = 3
 var dead = false
 @onready var timer = $Timer
 var running = false
-
+var first = 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if ray_cast_right.is_colliding():
+		if first == 1:
+			it_me.play()
+			first -= 1
 		running = true
 		animated_sprite.flip_h = false
 		position.x += SPEED * delta
 	if ray_cast_left.is_colliding():
+		if first == 1:
+			it_me.play()
+			first -= 1
+		first = true
 		running  = true
 		animated_sprite.play("walk")
 		animated_sprite.flip_h = true
@@ -37,8 +46,7 @@ func _process(delta):
 		running = false
 		animated_sprite.play("idle")
 		position.x -= SPEED * delta
-
-	
+		
 	if dead:
 		animated_sprite.play("death")
 	elif running:
@@ -63,3 +71,4 @@ func trigger_death():
 func _on_damage_body_entered(body):
 	hurt.play()
 	body.damage()
+

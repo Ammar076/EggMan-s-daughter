@@ -10,6 +10,10 @@ var direction = 1
 @onready var stop_left = $RayCastLeft
 @onready var stop_right = $RayCastRight
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var die = $die
+@onready var hit = $hit
+
+
 var health = 3
 var dead = false
 @onready var timer = $Timer
@@ -41,8 +45,10 @@ func _process(delta):
 
 	
 	if dead:
+		die.play()
 		animated_sprite.play("Die")
 	elif running:
+		hit.play()
 		animated_sprite.play("Spin(hit)")
 	else:
 		animated_sprite.play("Idle")
