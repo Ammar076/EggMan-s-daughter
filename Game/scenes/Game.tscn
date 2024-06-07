@@ -430,10 +430,10 @@ position = Vector2(-370, 89)
 shape = SubResource("WorldBoundaryShape2D_uewk4")
 
 [node name="Character" parent="." instance=ExtResource("5_4jqdu")]
-position = Vector2(-10, 25)
+position = Vector2(69, -21)
 
 [node name="Camera2D" type="Camera2D" parent="Character"]
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 limit_bottom = 120
 
 [node name="miniEnemy" parent="." instance=ExtResource("6_b7vfc")]

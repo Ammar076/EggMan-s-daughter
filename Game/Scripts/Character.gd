@@ -13,7 +13,7 @@ var jumping = false
 var attack = false
 var damaged = false
 @onready var timer = $AttackTimer
-
+@onready var health_label = $Label
 var coyote_frames = 600  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
@@ -23,6 +23,7 @@ var last_floor = false  # Last frame's on-floor state
 
 func _ready():
 	coyotetimer.wait_time = coyote_frames / 60.0
+	display_health()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -44,12 +45,14 @@ func _physics_process(delta):
 		coyotetimer.start()
 	
 	if Input.is_action_just_pressed("attack"):
-		$Area2D/CollisionShape2D.disabled = false
+		if animated_sprite.flip_h:
+			$attackleft/CollisionShape2D.disabled = false
+		else:
+			$attackright/CollisionShape2D.disabled = false
 		attack = true
 		timer.start()
 		print("attack")
-	else:
-		$Area2D/CollisionShape2D.disabled = true
+		
 	# Flip the Sprite
 	if direction > 0:
 		animated_sprite.flip_h = false
@@ -59,6 +62,7 @@ func _physics_process(delta):
 	if damaged == true:
 		if health > 0:
 			animated_sprite.play("hurt")
+			
 		else: 
 			Engine.time_scale = 0.5
 			animated_sprite.play("death")
@@ -90,6 +94,8 @@ func _on_killzone_player_damaged():
 		
 func _on_timer_timeout():
 	attack = false
+	$attackright/CollisionShape2D.disabled = true
+	$attackleft/CollisionShape2D.disabled = true
 	
 func _on_coyotetimer_timeout():
 	coyote = false
@@ -101,6 +107,7 @@ func damage():
 		damagetimer.start()
 	else:
 		deathtimer.start()
+	display_health()
 
 func _on_damagetimer_timeout():
 	if health > 0:
@@ -110,5 +117,13 @@ func _on_deathtimer_timeout():
 	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()
 
-func _on_area_2d_body_entered(body):
+func display_health():
+	health_label.text = "PLAYER x " + str(health)
+
+
+func _on_attackleft_body_entered(body):
+	body.trigger_death()
+
+
+func _on_attackright_body_entered(body):
 	body.trigger_death()
