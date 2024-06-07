@@ -23,30 +23,36 @@ var last_floor = false  # Last frame's on-floor state
 var score = 0
 @onready var score_label = $score_label
 
+const wall_jump_pushback = 100
+
 func _ready():
 	coyotetimer.wait_time = coyote_frames / 60.0
 	display_health()
 	score_label.text = "Coins x " + str(score)
 
 func _physics_process(delta):
-	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
 	last_floor = is_on_floor()
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote):
-		velocity.y = JUMP_VELOCITY
-		jumping = true
-		
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			velocity.y = JUMP_VELOCITY
+		if is_on_wall() and Input.is_action_just_pressed("move_right"):
+			velocity.y = JUMP_VELOCITY
+			velocity.x = -wall_jump_pushback
+		if  is_on_wall() and Input.is_action_just_pressed("move_left"):
+			velocity.y = JUMP_VELOCITY
+			velocity.x = wall_jump_pushback
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 	
 	if !is_on_floor() and last_floor and !jumping:
 		coyote = true
 		coyotetimer.start()
-	
+		
 	if Input.is_action_just_pressed("attack"):
 		if animated_sprite.flip_h:
 			$attackleft/CollisionShape2D.disabled = false
