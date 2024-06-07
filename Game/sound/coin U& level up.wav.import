@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cx4a76wqeygss"
+path="res://.godot/imported/coin U& level up.wav-a0652dc61a33f8b1b56425b83eb29fda.sample"
+
+[deps]
+
+source_file="res://sound/coin U& level up.wav"
+dest_files=["res://.godot/imported/coin U& level up.wav-a0652dc61a33f8b1b56425b83eb29fda.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
