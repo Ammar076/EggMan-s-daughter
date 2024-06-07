@@ -53,6 +53,7 @@ radius = 8.26514
 radius = 7.0
 
 [node name="miniEnemy" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_nftbp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

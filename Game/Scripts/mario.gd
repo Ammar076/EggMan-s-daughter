@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 50
+const SPEED = 70
 
 const JUMP_VELOCITY = -400.0
 @onready var hurt = $hurt
@@ -15,34 +15,35 @@ var direction = 1
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var it_me = $it_ME
 
-var health = 3
+var health = 5
 var dead = false
 @onready var timer = $Timer
 var running = false
-var first = 1
+var second = 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if ray_cast_right.is_colliding():
-		if first == 1:
+		if second == 1:
 			it_me.play()
-			first -= 1
+			second  = 0
 		running = true
 		animated_sprite.flip_h = false
 		position.x += SPEED * delta
-	if ray_cast_left.is_colliding():
-		if first == 1:
+	elif ray_cast_left.is_colliding():
+		if second == 1:
 			it_me.play()
-			first -= 1
-		first = true
+			second = 0 
 		running  = true
 		animated_sprite.play("walk")
 		animated_sprite.flip_h = true
 		position.x -= SPEED * delta
+	else:
+		running = false
 	if stop_left.is_colliding():
 		running  = false
 		animated_sprite.play("idle")
 		position.x += SPEED * delta
-	if stop_right.is_colliding():
+	elif stop_right.is_colliding():
 		running = false
 		animated_sprite.play("idle")
 		position.x -= SPEED * delta

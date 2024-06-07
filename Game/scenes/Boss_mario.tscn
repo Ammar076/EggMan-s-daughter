@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://6wsru8dypwq4" path="res://scenes/damage.tscn" id="4_c16iw"]
 [ext_resource type="AudioStream" uid="uid://dqbo25m0638tl" path="res://sound/oof_mario.mp3" id="4_xx4ql"]
 [ext_resource type="AudioStream" uid="uid://dkkwtirxqapeb" path="res://sound/Get_hit_mario.mp3" id="5_g43kj"]
-[ext_resource type="AudioStream" uid="uid://bfiyktlm1oh1j" path="res://sound/die 1.wav" id="6_2b8j0"]
+[ext_resource type="AudioStream" uid="uid://bmgdgnlrm1bks" path="res://sound/mario_fart.mp3" id="6_vep6h"]
 [ext_resource type="AudioStream" uid="uid://dpuyrykx12iwy" path="res://sound/its-me-mario.mp3" id="7_t3fwx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uor8i"]
@@ -69,7 +69,7 @@ animation = &"walk"
 autoplay = "idle"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 3.0
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 10)
@@ -108,7 +108,7 @@ bus = &"SFX"
 stream = ExtResource("5_g43kj")
 
 [node name="die" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_2b8j0")
+stream = ExtResource("6_vep6h")
 
 [node name="it_ME" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_t3fwx")

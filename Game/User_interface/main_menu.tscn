@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c88xx3kj0hcc5"]
+[gd_scene load_steps=12 format=3 uid="uid://c88xx3kj0hcc5"]
 
 [ext_resource type="Script" path="res://User_interface/main_menu.gd" id="1_8oacd"]
 [ext_resource type="AudioStream" uid="uid://dqbo25m0638tl" path="res://sound/oof_mario.mp3" id="2_5gc65"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cfbcolvy67l" path="res://assets/fonts/StepalangeShort-p7GZd.otf" id="4_5jiub"]
 [ext_resource type="AudioStream" uid="uid://dulva16nw82ue" path="res://sound/8_bit_iced_village_lofi.mp3" id="5_hhst6"]
 [ext_resource type="AudioStream" uid="uid://bx4k4ebyqgc4p" path="res://sound/Let's go_maroi.mp3" id="7_b0d1j"]
+[ext_resource type="Texture2D" uid="uid://civobto8aa68u" path="res://Muaz-Tiles/THE Stupid 2D Char/idle/Warrior_Idle_1.png" id="8_u0rar"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wso6f"]
 bg_color = Color(0.223103, 0.223103, 0.223103, 1)
@@ -142,3 +143,8 @@ bus = &"Music"
 [node name="Ler\'s Go" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_b0d1j")
 bus = &"SFX"
+
+[node name="WarriorIdle1" type="Sprite2D" parent="."]
+position = Vector2(457, 641)
+scale = Vector2(3.20455, 3.20455)
+texture = ExtResource("8_u0rar")
