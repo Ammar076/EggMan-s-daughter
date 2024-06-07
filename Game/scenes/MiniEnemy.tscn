@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmbo0wf7nqvs2"]
+
+[ext_resource type="Script" path="res://Scripts/Mini_enemy.gd" id="1_nftbp"]
+[ext_resource type="Texture2D" uid="uid://cvj1vujoybww" path="res://Sprites/Mario_slimes.png" id="2_gm7af"]
+[ext_resource type="PackedScene" uid="uid://dqna2g3mgbipy" path="res://scenes/damage.tscn" id="3_hmg27"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h54gh"]
+atlas = ExtResource("2_gm7af")
+region = Rect2(36, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we6uf"]
+atlas = ExtResource("2_gm7af")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct4xa"]
+atlas = ExtResource("2_gm7af")
+region = Rect2(18, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l14h1"]
+atlas = ExtResource("2_gm7af")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a78p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h54gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we6uf")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct4xa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l14h1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_spbs2"]
+radius = 8.26514
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5xpl"]
+radius = 7.0
+
+[node name="miniEnemy" type="CharacterBody2D"]
+script = ExtResource("1_nftbp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.77636e-15, 1.10336)
+scale = Vector2(1.02315, 0.91376)
+sprite_frames = SubResource("SpriteFrames_2a78p")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(11, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-12, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("CircleShape2D_spbs2")
+
+[node name="Damage" parent="." instance=ExtResource("3_hmg27")]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_p5xpl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]
