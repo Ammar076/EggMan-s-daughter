@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://khfy3a1lqeyu"]
+
+[ext_resource type="Script" path="res://Scripts/Mini_enemy.gd" id="1_yr1ck"]
+[ext_resource type="Texture2D" uid="uid://cqsk3lhd13wr0" path="res://Sprites/Mario_slimes.png" id="2_51gq7"]
+[ext_resource type="PackedScene" uid="uid://6wsru8dypwq4" path="res://scenes/damage.tscn" id="4_y5nky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4lxr"]
+atlas = ExtResource("2_51gq7")
+region = Rect2(18, 34, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tx43"]
+atlas = ExtResource("2_51gq7")
+region = Rect2(36, 34, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27egw"]
+atlas = ExtResource("2_51gq7")
+region = Rect2(0, 34, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhlcj"]
+atlas = ExtResource("2_51gq7")
+region = Rect2(18, 34, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a78p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4lxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tx43")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27egw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhlcj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_spbs2"]
+radius = 8.26514
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5xpl"]
+radius = 7.0
+
+[node name="miniEnemy" type="CharacterBody2D"]
+script = ExtResource("1_yr1ck")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.77636e-15, 1.10336)
+scale = Vector2(1.02315, 0.91376)
+sprite_frames = SubResource("SpriteFrames_2a78p")
+animation = &"death"
+autoplay = "idle"
+frame = 1
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(11, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-12, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("CircleShape2D_spbs2")
+
+[node name="Damage" parent="." instance=ExtResource("4_y5nky")]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_p5xpl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Damage" to="." method="_on_damage_body_entered"]
